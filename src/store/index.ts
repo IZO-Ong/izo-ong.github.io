@@ -5,7 +5,7 @@ const portfolioSlice = createSlice({
   name: 'portfolio',
   initialState: {
     projects: PROJECTS,
-    acadmemicPlan: ACADEMIC_PLAN,
+    academicPlan: ACADEMIC_PLAN,
   },
   reducers: {}
 });

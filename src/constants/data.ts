@@ -5,8 +5,8 @@ export const PROFILE_IMAGE = "/profile.jpg";
 export const PROJECTS: Project[] = [
   {
     title: "Epstein's LinkedIn Files",
-    description: "Chrome extension using MediaPipe and WASM to redact facial landmarks and names on LinkedIn.",
-    tags: ["React", "MediaPipe", "WASM", "Chrome API"],
+    description: "Chrome extension using MediaPipe to redact facial landmarks and names on LinkedIn.",
+    tags: ["Typescript", "React", "MediaPipe"],
     image: "/projects/epstein-linkedin.png"
   },
   {
