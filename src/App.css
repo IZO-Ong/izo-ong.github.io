@@ -106,73 +106,179 @@ body {
 /* ==========================================================================
    4. HERO SECTION
    ========================================================================== */
-.hero {
-  padding: 120px 0;
-  text-align: center;
+/* HERO & ABOUT ROW */
+.hero-about-section {
+  padding: 120px 0 80px;
+  background-color: var(--bg-color);
 }
 
-.hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  line-height: 1.1;
+.hero-about-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Balanced spacing between image and text */
+}
+
+/* Rounded Square Profile */
+.profile-square {
+  width: 320px; /* Large presence */
+  height: 320px;
+  border-radius: 24px; /* Big rounded borders */
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.hero-text-container {
+  flex: 1;
+}
+
+.hero-text-container h1 {
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
-.highlight {
-  color: var(--primary);
-}
-
-.hero-subtext {
-  font-size: 1.25rem;
+.hero-description {
+  font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 650px;
-  margin: 0 auto;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 600px; /* Fixes the "too long width" issue */
+}
+
+/* Inline Stats under Bio */
+.stats-inline {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.stats-inline li strong {
+  color: var(--primary);
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* EXPERIENCE STYLING */
+.exp-item {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.exp-header strong {
+  font-size: 1.2rem;
+}
+
+.exp-header span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 968px) {
+  .hero-about-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+  
+  .stats-inline {
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================
    5. COMPONENT: CARDS (Projects & Modules)
    ========================================================================== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-/* Shared card behavior */
-.card, .module-card {
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   transition: var(--transition);
+  gap: 2rem;
 }
 
-.card:hover, .module-card:hover {
+.project-row:hover {
   border-color: var(--primary);
   transform: translateY(-5px);
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
 }
 
-/* Project Card Specifics */
-.card {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
+.project-details {
+  flex: 1; /* Takes up remaining space */
 }
 
-.card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+.project-details h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
-.card p {
+.project-details p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
-  flex-grow: 1;
+  line-height: 1.7;
 }
 
-/* Module Card Specifics */
+.project-image-container {
+  flex: 0 0 40%; /* Fixed width of 40% */
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-row:hover .project-image {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  
+  .project-image-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .module-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -205,8 +311,14 @@ body {
   font-weight: 800;
   color: var(--primary);
   background: var(--primary-light);
-  padding: 0.25rem 0.75rem;
+  width: 45px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================

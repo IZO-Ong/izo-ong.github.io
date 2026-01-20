@@ -1,29 +1,35 @@
 import type { Project, Semester } from '../types';
 
+export const PROFILE_IMAGE = "/profile.jpg";
+
 export const PROJECTS: Project[] = [
   {
     title: "Epstein's LinkedIn Files",
     description: "Chrome extension using MediaPipe and WASM to redact facial landmarks and names on LinkedIn.",
-    tags: ["React", "MediaPipe", "WASM", "Chrome API"]
-  },
-  {
-    title: "Bluesky Toxicity Classifier",
-    description: "Data pipeline using Apache Airflow and AWS EC2 to classify social media toxicity.",
-    tags: ["Airflow", "AWS", "Docker", "Next.js", "Flask"]
-  },
-  {
-    title: "perg",
-    description: "High-performance C++ command-line tool designed for efficient regex pattern scanning.",
-    tags: ["C++", "Regex", "Optimization", "CLI"]
+    tags: ["React", "MediaPipe", "WASM", "Chrome API"],
+    image: "/projects/epstein-linkedin.png" // Pointing to public/projects/
   },
   {
     title: "NetPulse",
     description: "Desktop network diagnostic tool built with JavaFX and Spring Boot for real-time monitoring.",
-    tags: ["Java", "JavaFX", "Spring Boot", "Networking"]
+    tags: ["Java", "JavaFX", "Spring Boot", "Socket Programming"],
+    image: "/projects/netpulse.png"
+  },
+  {
+    title: "Bluesky Toxicity Tracker",
+    description: "Data pipeline using Apache Airflow and AWS EC2 to classify social media toxicity.",
+    tags: ["Airflow", "AWS", "Docker", "Next.js", "Flask"],
+    image: "/projects/bluesky-toxicity.png"
+  },
+  {
+    title: "NUS Cat Classifier",
+    description: "High-performance C++ command-line tool designed for efficient regex pattern scanning.",
+    tags: ["C++", "Regex", "Optimization", "CLI"],
+    image: "/projects/nus-cat.png"
   }
 ];
 
-export const ACADEMIC_HISTORY: Semester[] = [
+export const ACADEMIC_PLAN: Semester[] = [
   {
     term: "Year 2 Semester 1",
     modules: [
