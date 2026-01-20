@@ -60,7 +60,7 @@ export const ACADEMIC_PLAN: Semester[] = [
       { code: "CS1231", name: "Discrete Structures", grade: "A" },
       { code: "MA2001", name: "Linear Algebra I", grade: "A" },
       { code: "MA2002", name: "Calculus", grade: "A" },
-      { code: "NTW2032", name: "Death, Identity and Immortality", grade: "A" },
+      { code: "NTW2032", name: "Identity, Death, and Immortality", grade: "A" },
       { code: "NSW2001", name: "Understanding the Social World: Singapore & Beyond", grade: "A" },
     ]
   }

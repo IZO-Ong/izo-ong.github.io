@@ -1,28 +1,93 @@
-/* Hero & About Row */
-.hero-about-section { padding: 120px 0 80px; }
-.hero-about-row { display: flex; align-items: center; gap: 4rem; }
-
-.profile-square {
-  width: 320px;
-  height: 320px;
-  border-radius: 24px;
-  object-fit: cover;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border-color);
-}
-
-.hero-text-container h1 { font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.04em; }
-.hero-description { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; }
-
-.stats-inline {
+.hero-section {
+  padding: 120px 0;
+  min-height: 80vh;
   display: flex;
-  gap: 2rem;
-  list-style: none;
-  border-top: 1px solid var(--border-color);
-  padding-top: 1.5rem;
+  align-items: center;
 }
 
-.stats-inline li strong { color: var(--primary); display: block; font-size: 0.8rem; text-transform: uppercase; }
+.hero-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image-wrapper {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
+  margin-left: -60px;
+}
+
+.profile-image-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+  flex: 1;
+  margin-left: -140px;
+  z-index: 10;
+}
+
+.bleed-wrapper {
+  position: relative;
+}
+
+/* Massive Hero Typography */
+.hero-name {
+  font-size: 8.5rem; /* Large size to fill space */
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.hero-typing {
+  font-size: 3.5rem; /* Larger typing text */
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Dual Layer Magic */
+.text-layer {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.layer-black {
+  color: var(--text-main);
+}
+
+.layer-white {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* Adjust '140px' to match the hero-content margin-left.
+     This reveals white text ONLY where it overlaps the image boundary. */
+  clip-path: inset(0 calc(100% - 140px) 0 0);
+}
+
+.cursor {
+  color: var(--primary);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Mobile fallback: disable overlap and color split */
+@media (max-width: 1024px) {
+  .hero-container { flex-direction: column; text-align: center; }
+  .hero-image-wrapper { width: 350px; height: 350px; margin: 0 auto 2rem; }
+  .hero-content { margin-left: 0; }
+  .hero-name { font-size: 4.5rem; }
+  .hero-typing { font-size: 2rem; }
+  .layer-white { display: none; }
+}
 
 /* Experience */
 .experience-list { display: flex; flex-direction: column; gap: 1.5rem; }

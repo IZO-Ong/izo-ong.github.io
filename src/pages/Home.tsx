@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import type { RootState } from '../store';
 import Section from '../components/Section';
 import ProjectRow from '../components/ProjectRow';
+import TypingAnimator from '../components/TypingAnimator';
 import { PROFILE_IMAGE } from '../constants/data';
 
 const Home: React.FC = () => {
@@ -10,19 +11,26 @@ const Home: React.FC = () => {
 
   return (
     <div id="top">
-      <section id="about" className="section hero-about-section">
-        <div className="container hero-about-row">
-          <div className="hero-image-container">
-            <img src={PROFILE_IMAGE} alt="Isaac Ong" className="profile-square" />
+      <section className="hero-section">
+        <div className="container hero-container">
+          <div className="hero-image-wrapper">
+            <img src={PROFILE_IMAGE} alt="Isaac Ong" className="profile-image-large" />
           </div>
 
-          <div className="hero-text-container">
-            <h1>Isaac <span className="highlight">Ong</span></h1>
-            <p className="hero-description">
-              I am a year 2 Computer Science student at the National University of Singapore and NUS College. 
-              I focus on the intersection of high-performance computing and database systems, 
-              leveraging my background in data workflows and programming methodology.
-            </p>
+          <div className="hero-content">
+            <div className="bleed-wrapper">
+              {/* Layer 1: The underlying black text */}
+              <div className="text-layer layer-black">
+                <h1 className="hero-name">Isaac Ong</h1>
+                <h2 className="hero-typing">A <TypingAnimator /></h2>
+              </div>
+
+              {/* Layer 2: The white text clipped to the image boundary */}
+              <div className="text-layer layer-white" aria-hidden="true">
+                <h1 className="hero-name">Isaac Ong</h1>
+                <h2 className="hero-typing">A <TypingAnimator /></h2>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -67,3 +75,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
