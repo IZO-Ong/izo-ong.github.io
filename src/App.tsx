@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <nav className="navbar">
             <div className="container nav-content">
               <ul className="nav-links">
-                <li><Link smooth to="/#top">About</Link></li>
+                <li><Link to="/#top">About</Link></li>
                 <li><Link to="/modules">Modules</Link></li>
               </ul>
             </div>

@@ -52,7 +52,7 @@ const Home: React.FC = () => {
       </Section>
 
       {/* Projects Section */}
-      <Section id="projects" title="Featured Projects">
+      <Section id="projects" title="Projects">
         <div className="projects-container">
           {projects.map((project, index) => (
             <ProjectRow key={index} project={project} />
