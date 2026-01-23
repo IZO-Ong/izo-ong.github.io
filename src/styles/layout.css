@@ -34,7 +34,7 @@
   opacity: 0.3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section-title {
     text-align: center;
     width: 100%;
