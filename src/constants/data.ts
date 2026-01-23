@@ -1,34 +1,40 @@
 import type { Project, Semester, Award } from '../types';
 
-export const PROFILE_IMAGE = "/profile.jpg";
+import epsteinImg from '../assets/projects/epstein-linkedin.png';
+import netpulseImg from '../assets/projects/netpulse.png';
+import blueskyImg from '../assets/projects/bluesky-toxicity.png';
+import nusCatImg from '../assets/projects/nus-cat.png';
+import profileImg from '../assets/profile.jpg';
+
+export const PROFILE_IMAGE = profileImg;
 
 export const PROJECTS: Project[] = [
   {
     title: "Epstein's LinkedIn Files",
     description: "Chrome extension using MediaPipe to redact eyes and names on LinkedIn.",
     tags: ["React", "Vite", "MediaPipe"],
-    image: "/projects/epstein-linkedin.png",
+    image: epsteinImg,
     link: "https://github.com/IceyFoxes/epstein-extension"
   },
   {
     title: "NetPulse",
     description: "Desktop network diagnostic tool built with JavaFX and Spring Boot.",
     tags: ["Java", "JavaFX", "Spring Boot", "Socket Programming"],
-    image: "/projects/netpulse.png",
+    image: netpulseImg,
     link: "https://github.com/IZO-Ong/NetPulse"
   },
   {
     title: "Bluesky Toxicity Tracker",
     description: "Data pipeline using Apache Airflow and AWS EC2 to track social media (Bluesky) toxicity.",
     tags: ["Airflow", "AWS", "Docker", "Next.js", "Flask"],
-    image: "/projects/bluesky-toxicity.png",
+    image: blueskyImg,
     link: "https://github.com/IZO-Ong/Bluesky-Toxicity-Tracker" 
   },
   {
     title: "NUS Cat Classifier",
     description: "Full-stack web application designed to identify and classify the campus cats of NUS, accompanied with forums.",
     tags: ["React", "Vite", "Flask", "Pytorch"],
-    image: "/projects/nus-cat.png",
+    image: nusCatImg,
     link: "https://github.com/IZO-Ong/NUS-Cat-Classifier"
   }
 ];
