@@ -1,21 +1,19 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 import './AboutSection.css';
-import paintStrokePng from '../assets/paint-stroke.png';
-import microphoneImg from '../assets/microphone.jpg';
+import paintStrokePng from '../../assets/paint-stroke.png';
+import microphoneImg from '../../assets/microphone.jpg';
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    // Triggers as it enters and finishes at the center
     offset: ["start 0.9", "center center"]
   });
 
   const smoothProgress = useSpring(scrollYProgress, { damping: 20, stiffness: 80 });
 
-  // Extremely wide diagonal sweep bounds to ensure the larger stroke is never clipped
   const paintReveal = useTransform(
     smoothProgress,
     [0, 1],

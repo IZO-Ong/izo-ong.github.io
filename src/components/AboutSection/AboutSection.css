@@ -49,16 +49,8 @@
   max-width: 550px;
 }
 
-.section-title {
-  margin-bottom: 2rem;
-  font-size: 3rem; /* Slightly larger heading for the bigger section */
-  font-weight: 900;
-  color: var(--primary);
-  letter-spacing: -0.02em;
-}
-
 .about-description {
-  font-size: 1.2rem; /* Slightly larger text to match the scale */
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--text-muted);
 }
@@ -94,7 +86,7 @@
     padding: 0 2rem;
   }
   .paint-png { 
-    width: 200%; /* Massive coverage for vertical mobile screens */
+    width: 200%;
     transform: translate(-50%, -50%) rotate(-12deg);
   }
   .about-image-frame {
