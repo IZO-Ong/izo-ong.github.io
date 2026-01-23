@@ -47,10 +47,28 @@
   transition: var(--transition);
 }
 
+.module-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.1rem;
+}
+
+.top-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
 .module-info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  flex: 1;
 }
 
 .module-code { 

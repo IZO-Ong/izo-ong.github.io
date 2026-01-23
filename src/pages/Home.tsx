@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import type { RootState } from '../store';
 import Section from '../components/Section';
 import ProjectRow from '../components/ProjectRow';
-import TypingAnimator from '../components/TypingAnimator';
+import HeroText from '../components/HeroText';
+import AboutSection from '../components/AboutSection';
 import { PROFILE_IMAGE } from '../constants/data';
 
 const Home: React.FC = () => {
@@ -18,22 +19,12 @@ const Home: React.FC = () => {
           </div>
 
           <div className="hero-content">
-            <div className="bleed-wrapper">
-              {/* Layer 1: The underlying black text */}
-              <div className="text-layer layer-black">
-                <h1 className="hero-name">Isaac Ong</h1>
-                <h2 className="hero-typing">A <TypingAnimator /></h2>
-              </div>
-
-              {/* Layer 2: The white text clipped to the image boundary */}
-              <div className="text-layer layer-white" aria-hidden="true">
-                <h1 className="hero-name">Isaac Ong</h1>
-                <h2 className="hero-typing">A <TypingAnimator /></h2>
-              </div>
-            </div>
+            <HeroText />
           </div>
         </div>
       </section>
+
+      <AboutSection />
 
       <Section id="experience" title="Experience">
         <div className="experience-list">

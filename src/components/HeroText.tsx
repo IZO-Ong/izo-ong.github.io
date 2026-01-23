@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const words = ["Builder", "Curious Academic", "Problem Solver", "Systems Thinker"];
 
-const TypingAnimator: React.FC = () => {
+const HeroText: React.FC = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -33,10 +33,20 @@ const TypingAnimator: React.FC = () => {
   }, [text, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <>
-      {text}<span className="cursor">|</span>
-    </>
+    <div className="bleed-wrapper">
+      {/* Black/Primary Layer */}
+      <div className="text-layer layer-black">
+        <h1 className="hero-name">Isaac Ong</h1>
+        <h2 className="hero-typing">A {text}<span className="cursor">|</span></h2>
+      </div>
+
+      {/* White Overlay Layer */}
+      <div className="text-layer layer-white" aria-hidden="true">
+        <h1 className="hero-name">Isaac Ong</h1>
+        <h2 className="hero-typing">A {text}<span className="cursor">|</span></h2>
+      </div>
+    </div>
   );
 };
 
-export default TypingAnimator;
+export default HeroText;

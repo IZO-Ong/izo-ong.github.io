@@ -1,6 +1,6 @@
 .hero-section {
-  padding: 60px 0; /* Reduced from 120px to tighten top/bottom space */
-  min-height: 70vh; /* Slightly reduced height */
+  padding: 160px 0;
+  min-height: 70vh;
   display: flex;
   align-items: center;
 }
@@ -53,7 +53,7 @@
 
 /* Layer Color Logic */
 .layer-black {
-  color: var(--primary); /* Changed from black to theme primary color */
+  color: var(--primary);
 }
 
 .layer-white {

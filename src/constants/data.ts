@@ -31,9 +31,21 @@ export const PROJECTS: Project[] = [
 
 export const ACADEMIC_PLAN: Semester[] = [
   {
+    term: "Year 2 Semester 2",
+    modules: [
+      { code: "CS2101", name: "Effective Communication for Computing Professionals", grade: "-" },
+      { code: "CS2103T", name: "Software Engineering", grade: "-" },
+      { code: "CS2106", name: "Introduction to Operating Systems", grade: "-" },
+      { code: "CS3223", name: "Database Systems Implementation", grade: "-" },
+      { code: "CS4225", name: "Big Data Systems for Data Science", grade: "-" },
+      { code: "ST2132", name: "Mathematical Statistics", grade: "-" },
+      { code: "NST2015", name: "Mathematics and Reality", grade: "-" },
+    ]
+  },
+  {
     term: "Year 2 Semester 1",
     modules: [
-      { code: "CS2102", name: "Database Systems", grade: "A+" },
+      { code: "CS2102", name: "Database Systems", grade: "A+", topStudent: true },
       { code: "CS2109S", name: "Introduction to AI and Machine Learning", grade: "A+" },
       { code: "CS2030S", name: "Programming Methodology II", grade: "A+" },
       { code: "CS2100", name: "Computer Organisation", grade: "A" },
@@ -46,7 +58,7 @@ export const ACADEMIC_PLAN: Semester[] = [
   {
     term: "Year 1 Semester 2",
     modules: [
-      { code: "CS2040", name: "Data Structures and Algorithms", grade: "A+" },
+      { code: "CS2040", name: "Data Structures and Algorithms", grade: "A+", topStudent: true },
       { code: "ST2131", name: "Probability", grade: "A" },
       { code: "DSA1101", name: "Introduction to Data Science", grade: "A" },
       { code: "NGT2001", name: "Global Social Thought", grade: "A" },

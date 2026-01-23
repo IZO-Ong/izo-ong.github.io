@@ -9,6 +9,7 @@ export interface Module {
   code: string;
   name: string;
   grade: string;
+  topStudent?: boolean;
 }
 
 export interface Semester {
