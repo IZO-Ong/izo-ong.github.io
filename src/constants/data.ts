@@ -1,7 +1,7 @@
 import type { Project, Semester, Award } from '../types';
 
 import epsteinImg from '../assets/projects/epstein-linkedin.png';
-import netpulseImg from '../assets/projects/netpulse.png';
+import netpulseImg from '../assets/projects/netpulse.jpg';
 import blueskyImg from '../assets/projects/bluesky-toxicity.png';
 import nusCatImg from '../assets/projects/nus-cat.png';
 import profileImg from '../assets/profile.jpg';

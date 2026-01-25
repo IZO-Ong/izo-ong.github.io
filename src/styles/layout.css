@@ -103,3 +103,17 @@
   transform: translateY(0);
   visibility: visible;
 }
+
+/* Prevent the flash of the top of the page */
+body.is-restoring-scroll #root {
+  opacity: 0;
+  visibility: hidden;
+  transition: none; /* No transition while hiding */
+}
+
+/* Smoothly fade back in once we are at the right spot */
+#root {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.15s ease-in-out;
+}

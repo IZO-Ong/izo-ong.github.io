@@ -9,7 +9,7 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ id, title, children, centered = false }) => {
-  const { domRef, isVisible } = useScrollReveal();
+  const { domRef, isVisible } = useScrollReveal(id);
 
   return (
     <section id={id} className={`section ${centered ? 'text-center' : ''}`}>

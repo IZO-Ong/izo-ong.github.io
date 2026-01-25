@@ -8,7 +8,7 @@ import type { Module } from '../../types';
 import './Modules.css';
 
 const ModuleCard: React.FC<{ mod: Module }> = ({ mod }) => {
-  const { domRef, isVisible } = useScrollReveal();
+  const { domRef, isVisible } = useScrollReveal(mod.code);
 
   return (
     <div 

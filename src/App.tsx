@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
@@ -8,11 +8,13 @@ import './styles/layout.css';
 
 import Home from './pages/Home';
 import Modules from './pages/Modules/Modules';
+import ScrollManager from './components/ScrollManager';
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
       <Router>
+        <ScrollManager />
         <div className="portfolio-wrapper">
           <nav className="navbar">
             <div className="container nav-content flex-end">

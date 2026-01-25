@@ -9,7 +9,7 @@ interface ProjectRowProps {
 }
 
 const ProjectRow: React.FC<ProjectRowProps> = ({ project }) => {
-  const { domRef, isVisible } = useScrollReveal();
+  const { domRef, isVisible } = useScrollReveal(project.title);
 
   return (
     <div 
